@@ -4,25 +4,27 @@ Recent works have shown that Federated Learning (FL) is vulnerable to backdoor a
 
 
 ## Setting up your enviornment
-1. Build a conda environment using requirements.txt:
+1. Download and install miniconda
 ```
-conda create --name <env> --file requirements.txt
+source install_conda.sh
 ```
 
-2. Once all the dependencies are installed, activate the environment using:
+2. After restaring the shell, create a conda environment using requirements_agsd.yml and install all dependencies:
 ```
-conda activate <env>
+source install_packages.sh
 ```
+
+## Downloading pretrained models
+To download pretrained models use the following script:
+```
+source download_pretrained_models.sh
+```
+Note that the pretrained models will only be available for a few months.
 
 ## Running the code
 1. Use p1_agsd/config.py to set your experiment configurations. All standard configurations are already there.
 
-2. If you would like to download the pretrained models (~13GB), use:
-```
-python _p1_agsd_main.py --download_pretrained_models --train_models
-```
-
-3. If you would like to train your own models, use:
+2. If you would like to train your own models, use:
 ```
 python _p1_agsd_main.py --train_models
 ```
