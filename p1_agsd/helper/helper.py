@@ -181,6 +181,7 @@ class Helper_Hasnets:
                 df[key] = self.dictionary_to_save[key]
                 
         # save the dataframe
+        confirm_directory('/'.join(self.csv_path_and_filename.split('/')[:-1]))
         df.to_csv(self.csv_path_and_filename, index=False)
         
         return
