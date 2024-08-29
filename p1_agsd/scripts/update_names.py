@@ -47,7 +47,7 @@ def update_model_names(
     helper.check_conducted(data_name=my_data.data_name)
     named_updated = helper.experiment_conducted
     
-    if False:
+    if True:
         
         global_model = Torch_Model(my_data, my_model_configuration, path=helper.save_path)
         global_model.load_weights(global_model.save_directory + helper.model_name)
@@ -85,7 +85,7 @@ def update_model_names(
             
             confirm_directory( '/'.join(f'{revised_directory_final}{revised_model_name}'.split('/')[:-1]) )
             if not os.path.isfile(revised_directory_final+revised_model_name+'.pth'):
-                global_model.save_weights(revised_directory_final+revised_model_name)
+                global_model.save_weights(revised_directory_final+revised_model_name, save_optimizer=False)
                 print(f'Model has been saved at: {revised_directory_final+revised_model_name}')
             else:
                 print(f'WOW...! The model was already found at: {revised_directory_final+revised_model_name}')
