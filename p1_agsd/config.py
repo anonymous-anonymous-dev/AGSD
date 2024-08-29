@@ -11,9 +11,9 @@ experimental_setups = [
     all_experimental_setups.comparison_with_sota,
     
     # all_experimental_setups.hyperparameter_clients_sampling_ratio,
-    # all_experimental_setups.hyperparameter_heldout_set_size,
+    all_experimental_setups.hyperparameter_heldout_set_size,
     # all_experimental_setups.hyperparameter_backdoor_scaling_constant,
-    # all_experimental_setups.hyperparameter_backdoored_clients_ratio,
+    all_experimental_setups.hyperparameter_backdoored_clients_ratio,
     
     # all_experimental_setups.backdoor_and_defend,
     # all_experimental_setups.hidden_values_analysis,
@@ -35,7 +35,7 @@ versioning = False
 # experiment_folder = 'results_to_del/'
 # experiment_folder = 'results_hgsd_(std_transfer)_(efficient_sampling)_(guided_clustering)/'
 # experiment_folder = 'results_agsd_noniid/'
-experiment_folder = 'results_agsd_final/'
+experiment_folder = 'results_agsd_some/'
 results_path = '../../__all_results__/_p1_hasnets/' + experiment_folder
 reconduct_conducted_experiments = True
 count_continued_as_conducted = True

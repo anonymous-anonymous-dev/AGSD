@@ -21,7 +21,7 @@ def update_model_names(
 ):
     
     experiment_folder_nonfinal = results_path.split('/')[-2]
-    experiment_folder_final = 'results_agsd_final'
+    experiment_folder_final = 'results_agsd_some'
     results_path_final = f'../../__all_results__/_p1_hasnets/{experiment_folder_final}/'
     new_names_to_old_names = {
         'agsd_id': 'hasnet_heldout',
