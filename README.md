@@ -19,7 +19,7 @@ To download pretrained models use the following script:
 ```
 source download_pretrained_models.sh
 ```
-Note that the pretrained models will only be available for a few months.
+All models are not available online due to github limitations. Note that the pretrained models will only be available for a few months.
 
 ## Running the code
 1. Use p1_agsd/config.py to set your experiment configurations. All standard configurations are already there.
