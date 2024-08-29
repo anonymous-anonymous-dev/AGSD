@@ -163,10 +163,10 @@ def comparison_with_sota(dataset_names, results_path_local: str):
         'flame_(num_clients-100)_(clients_ratio-0.1)',
         'mesas_(num_clients-100)_(clients_ratio-0.1)',
         
-        # 'agsd_id_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-50)',
-        # 'agsd_ood_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-50)',
-        'agsd_id_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-100)',
-        'agsd_ood_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-100)',
+        'agsd_id_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-50)',
+        'agsd_ood_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-50)',
+        # 'agsd_id_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-100)',
+        # 'agsd_ood_(num_clients-100)_(clients_ratio-0.1)_(healing_set_size-100)',
     ]
     
     keys = ['test_acc', 'poisoned_acc']

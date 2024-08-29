@@ -21,6 +21,7 @@ def generate_sota_analysis_tables():
 
 
 def generate_adaptive_analysis_tables():
+    print('\n\nPrinting adaptive backdoor attack results:')
     # print(adaptive_attacks_evaluation_dyba(['gtsrb_non_sota'], results_path))
     print(adaptive_attacks_evaluation_mtba(['gtsrb_non_sota'], results_path))
     print(adaptive_attacks_evaluation_lba(['gtsrb_non_sota'], results_path))
@@ -45,6 +46,7 @@ def generate_non_iid_results_table():
         'gtsrb_non_sota_standard_non_iid7',
         'gtsrb_non_sota_standard_non_iid9',
     ]
+    print('\n\nPrinting non-IID data distribution results:')
     print(non_iid_analysis(dataset_types, results_path))
     return
 
@@ -52,7 +54,8 @@ def generate_non_iid_results_table():
 def generate_all_results_and_tables():
     generate_sota_analysis_tables()
     generate_adaptive_analysis_tables()
-    generate_non_iid_results_table()
-    # generate_hyperparameter_analysis_figures()
+    try: generate_non_iid_results_table()
+    except: pass
+    generate_hyperparameter_analysis_figures()
     return
 
