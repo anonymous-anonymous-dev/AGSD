@@ -541,7 +541,7 @@ def hyperparameter_backdoored_clients_ratio(dataset_names, results_path_local: s
             plt.legend(ncols=2)
             plt.tight_layout()
             
-            figs.append(fig)
+        figs.append(fig)
     
     if save_fig:
         save_figure_multiple_pages(figs, '__paper__/figures/outnumbering_backdoored_clients.pdf')
