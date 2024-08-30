@@ -32,8 +32,8 @@ shots_at_a_time = 10
 versioning = False
 
 # General configurations
-# experiment_folder = 'results_agsd_final/'
-experiment_folder = 'results_agsd_some/'
+experiment_folder = 'results_agsd_final/'
+# experiment_folder = 'results_agsd_some/'
 results_path = '../../__all_results__/_p1_hasnets/' + experiment_folder
 reconduct_conducted_experiments = False
 count_continued_as_conducted = False

@@ -213,7 +213,7 @@ def non_iid_analysis(dataset_names, results_path_local: str):
     return table_string
 
 
-def hyperparameter_analysis_heldout_set_size(dataset_names, results_path_local: str, save_fig: bool=True):
+def hyperparameter_analysis_heldout_set_size(dataset_names, results_path_local: str, figure_name: str='hyperparameter_heldout_set_size', save_fig: bool=True):
     
     # start generating figure of hyperparameter analysis
     clients_distributions = [ {'simple_(poison-0.25)': 0.45} ]
@@ -255,12 +255,12 @@ def hyperparameter_analysis_heldout_set_size(dataset_names, results_path_local: 
         figs.append(fig)
     
     if save_fig:
-        save_figure_multiple_pages(figs, '__paper__/figures/hyperparameter_heldout_set_size.pdf')
+        save_figure_multiple_pages(figs, f'__paper__/figures/{figure_name}.pdf')
     
     return
 
 
-def hyperparameter_backdoor_scale(dataset_names, results_path_local: str, save_fig: bool=True):
+def hyperparameter_backdoor_scale(dataset_names, results_path_local: str, figure_name: str='hyperparameter_backdoor_scaling', save_fig: bool=True):
     
     # start generating figure of hyperparameter analysis
     clients_distributions = [
@@ -302,12 +302,12 @@ def hyperparameter_backdoor_scale(dataset_names, results_path_local: str, save_f
         figs.append(fig)
     
     if save_fig:
-        save_figure_multiple_pages(figs, '__paper__/figures/hyperparameter_backdoor_scaling.pdf')
+        save_figure_multiple_pages(figs, f'__paper__/figures/{figure_name}.pdf')
     
     return
 
 
-def hyperparameter_analysis_clients_ratio(dataset_names, results_path_local: str, save_fig: bool=True):
+def hyperparameter_analysis_clients_ratio(dataset_names, results_path_local: str, figure_name: str='hyperparameter_clients_ratio', save_fig: bool=True):
     
     # start generating figure of hyperparameter analysis
     clients_distributions = [ {'simple_(poison-0.25)_(scale-2)': 0.45} ]
@@ -349,7 +349,7 @@ def hyperparameter_analysis_clients_ratio(dataset_names, results_path_local: str
         figs.append(fig)
     
     if save_fig:
-        save_figure_multiple_pages(figs, '__paper__/figures/hyperparameter_clients_ratio.pdf')
+        save_figure_multiple_pages(figs, f'__paper__/figures/{figure_name}.pdf')
     
     return
 
@@ -491,7 +491,7 @@ def special_table(dataset_names, results_path_local: str):
     return table_string
 
 
-def hyperparameter_backdoored_clients_ratio(dataset_names, results_path_local: str, save_fig: bool=True):
+def hyperparameter_backdoored_clients_ratio(dataset_names, results_path_local: str, figure_name: str='hyperparameter_backdoored_clients_ratio', save_fig: bool=True):
     
     # start generating figure of hyperparameter analysis
     clients_distributions = [
@@ -544,7 +544,7 @@ def hyperparameter_backdoored_clients_ratio(dataset_names, results_path_local: s
         figs.append(fig)
     
     if save_fig:
-        save_figure_multiple_pages(figs, '__paper__/figures/outnumbering_backdoored_clients.pdf')
+        save_figure_multiple_pages(figs, f'__paper__/figures/{figure_name}.pdf')
     
     return
 
