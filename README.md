@@ -31,7 +31,7 @@ python _p1_agsd_main.py --train_models
 
 4. Once the models are trained, get results tables (latex format) and figures (.pdf) using:
 ```
-python _p1_agsd_main.py --compile_results True --generate_results
+python _p1_agsd_main.py --compile_results --generate_results
 ```
 
 ## Cite as
@@ -43,3 +43,4 @@ python _p1_agsd_main.py --compile_results True --generate_results
   year={2024}
 }
 ```
+
