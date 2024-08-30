@@ -190,11 +190,15 @@ class Helper_Hasnets:
     def load_columns_in_dictionary(self, load_columns):
         
         # load the df file
-        df = pd.read_csv(self.csv_path_and_filename)
+        try:
+            df = pd.read_csv(self.csv_path_and_filename)
+            
+            for column in load_columns:
+                if column in df.columns:
+                    self.dictionary_to_load[column] = df[column].tolist()
         
-        for column in load_columns:
-            if column in df.columns:
-                self.dictionary_to_load[column] = df[column].tolist()
+        except:
+            print(f'No experiments for the data/model configuration: {self.my_model_configuration['dataset_name']} have been found.')
         
         return
         
