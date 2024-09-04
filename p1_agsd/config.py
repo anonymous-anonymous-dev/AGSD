@@ -10,17 +10,17 @@ from .configurations.experimental_setups import all_experimental_setups
 experimental_setups = [
     all_experimental_setups.comparison_with_sota,
     
-    # all_experimental_setups.hyperparameter_clients_sampling_ratio,
-    # all_experimental_setups.hyperparameter_heldout_set_size,
-    # all_experimental_setups.hyperparameter_backdoor_scaling_constant,
-    # all_experimental_setups.hyperparameter_backdoored_clients_ratio,
+    all_experimental_setups.hyperparameter_clients_sampling_ratio,
+    all_experimental_setups.hyperparameter_heldout_set_size,
+    all_experimental_setups.hyperparameter_backdoor_scaling_constant,
+    all_experimental_setups.hyperparameter_backdoored_clients_ratio,
     all_experimental_setups.hyperparameter_number_of_clusters,
     
-    # all_experimental_setups.adaptive_analysis,
+    all_experimental_setups.adaptive_analysis,
     
-    # all_experimental_setups.non_iid_dataset_analysis,
+    all_experimental_setups.non_iid_dataset_analysis,
     
-    # all_experimental_setups.evaluating_the_cost,
+    all_experimental_setups.evaluating_the_cost,
     
     # all_experimental_setups.backdoor_and_defend,
     # all_experimental_setups.hidden_values_analysis,
@@ -37,7 +37,6 @@ versioning = False
 # General configurations
 # experiment_folder = 'results_agsd_final/'
 experiment_folder = 'results_agsd_some/'
-# experiment_folder = 'results_agsd_few_rounds/'
 results_path = '../../__all_results__/_p1_hasnets/' + experiment_folder
 reconduct_conducted_experiments = False
 count_continued_as_conducted = True
