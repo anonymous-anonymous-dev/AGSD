@@ -42,7 +42,7 @@ class Trigger_Inversion(Adversarial_Attack):
         for iteration in range(iterations):
             x_perturbation, mask = self.step(x_input, y_input, x_perturbation, mask, epsilon=3*epsilon/iterations, targeted=targeted)
             x_perturbation = np.clip(x_perturbation, np.min(x_input), np.max(x_input))
-            mask = np.clip(mask, np.min(x_input), np.max(x_input))
+            mask = np.clip(mask, 0., 1.)
             
             if verbose:
                 print(f'\r{pre_str} | Iteration: {iteration:3d}/{iterations:3d}, Loss: {np.mean(self.last_run_loss_values[-1:]):.4f}', end='')
