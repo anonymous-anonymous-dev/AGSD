@@ -26,7 +26,6 @@ class Trigger_Inversion(Adversarial_Attack):
         self.optimizer = Torch_Optimizer(name='sgd', lr=1e-3, momentum=0.5)
         
         self.alpha = alpha
-        self.update_rate = 1.
         
         return
     
@@ -35,7 +34,6 @@ class Trigger_Inversion(Adversarial_Attack):
         
         self.last_run_loss_values = []
         epsilon *= np.max(x_input)-np.min(x_input)
-        self.update_rate = 20/iterations
         
         x_perturbation = np.zeros( shape=[1]+list(x_input.shape[1:]) ).astype(np.float32)
         mask = np.zeros( ([1]+[1]+list(x_input.shape[2:])) ).astype(np.float32)
