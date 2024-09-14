@@ -68,7 +68,7 @@ class Trigger_Inversion(Adversarial_Attack):
             loss = self.adv_loss_outputs(prediction, y_in)
         else:
             loss = -1 * self.adv_loss_outputs(prediction, y_in)
-        loss = self.alpha * loss + (1-self.alpha) * torch.mean(x_mask)
+        loss += torch.mean(x_mask)
         torch.mean(loss).backward()
         
         x_perturbation -= epsilon * x_delta.grad.data.sign().detach().cpu().numpy()
